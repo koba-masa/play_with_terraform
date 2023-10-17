@@ -27,3 +27,16 @@ brew install tflint
 terraform fmt -recursive
 ```
 
+### Linterの実行
+
+#### チェック
+
+```sh
+tflint --recursive
+```
+
+#### 修正
+
+```sh
+tflint --recursive --fix
+```
