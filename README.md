@@ -13,3 +13,9 @@ Terraformで遊び尽くすリポジトリ
    ```sh
    tfenv install
    ```
+
+### Linterのインストール
+```sh
+brew install tflint
+```
+
