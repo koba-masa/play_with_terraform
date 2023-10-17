@@ -19,3 +19,11 @@ Terraformで遊び尽くすリポジトリ
 brew install tflint
 ```
 
+## CI
+
+### フォーマッターの実行
+
+```sh
+terraform fmt -recursive
+```
+
