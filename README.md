@@ -39,11 +39,11 @@ terraform fmt -recursive
 #### チェック
 
 ```sh
-tflint --recursive
+tflint --recursive --config "$(pwd)/.tflint.hcl"
 ```
 
 #### 修正
 
 ```sh
-tflint --recursive --fix
+tflint --recursive --fix --config "$(pwd)/.tflint.hcl"
 ```

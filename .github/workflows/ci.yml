@@ -31,4 +31,4 @@ jobs:
       - name: Lint
         run: |
           tflint --init
-          tflint --recursive
+          tflint --recursive --config "$(pwd)/.tflint.hcl"
