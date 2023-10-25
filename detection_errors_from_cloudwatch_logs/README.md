@@ -2,14 +2,20 @@
 
 ## コマンド
 
+## INIT
+
+```sh
+terraform init -reconfigure -backend-config=backend/production.tfbackend
+```
+
 ### APPLY
 
 ```sh
-terraform apply -var-file environments/production.tfvars -var-file targets/sample_system.tfvars
+terraform apply -var-file environments/production.tfvars
 ```
 
 ### PLAN
 
 ```sh
-terraform plan -var-file environments/production.tfvars -var-file targets/sample_system.tfvars
+terraform plan -var-file environments/production.tfvars
 ```
