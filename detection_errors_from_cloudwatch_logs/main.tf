@@ -18,7 +18,10 @@ module "detection_errors_from_cloudwatch_logs" {
 module "detection_errors_from_cloudwatch_logs_notification" {
   source     = "./modules/notification"
   topic_name = "detection_errors_from_cloudwatch_logs"
-  tags   = local.tags
+  emails = [
+    ""
+  ]
+  tags = local.tags
 }
 
 module "common" {
