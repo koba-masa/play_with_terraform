@@ -21,5 +21,11 @@ resource "aws_lambda_function" "notification_lambda" {
   }
   timeout = 3
 
+  environment {
+    variables = {
+      SNS_TOPIC_ARN = var.sns_topic_arn
+    }
+  }
+
   tags = var.tags
 }

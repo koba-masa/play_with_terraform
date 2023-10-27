@@ -25,6 +25,7 @@ module "detection_errors_from_cloudwatch_logs_notification" {
 }
 
 module "common" {
-  source = "./modules/common"
-  tags   = local.tags
+  source        = "./modules/common"
+  sns_topic_arn = module.detection_errors_from_cloudwatch_logs_notification.sns_topic_arn
+  tags          = local.tags
 }
