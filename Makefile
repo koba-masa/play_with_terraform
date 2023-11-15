@@ -13,6 +13,6 @@ fix:
 	tflint --recursive --fix --config "$(CURRENT_DIR)/.tflint.hcl"
 
 ci:
-	terraform fmt -recursive
+	terraform fmt -check -recursive
 	terraform validate
 	tflint --recursive --config "$(CURRENT_DIR)/.tflint.hcl"
