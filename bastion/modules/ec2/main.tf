@@ -13,7 +13,7 @@ resource "aws_instance" "bastion" {
   instance_type = "t2.micro"
 
   subnet_id       = var.subnet_id
-  security_groups = var.security_groups
+  vpc_security_group_ids = var.security_groups
 
   instance_initiated_shutdown_behavior = "stop"
   private_dns_name_options {
