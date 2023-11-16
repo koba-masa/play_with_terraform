@@ -15,6 +15,8 @@ resource "aws_instance" "bastion" {
   subnet_id              = var.subnet_id
   vpc_security_group_ids = var.security_groups
 
+  iam_instance_profile = var.iam_instance_profile
+
   instance_initiated_shutdown_behavior = "stop"
   private_dns_name_options {
     hostname_type = "ip-name"
@@ -26,7 +28,7 @@ resource "aws_instance" "bastion" {
     Project     = var.project
     Environment = var.environment
     Identifier  = "bastion"
-    Name        = "${var.project}-${var.environment_short}-bastion"
+    Name        = "${var.project}_${var.environment_short}_bastion"
   }
 }
 

@@ -22,3 +22,7 @@ variable "security_groups" {
 variable "key_name" {
   type = string
 }
+
+variable "iam_instance_profile" {
+  type = string
+}
