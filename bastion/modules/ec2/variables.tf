@@ -1,7 +1,3 @@
-variable "region" {
-  type = string
-}
-
 variable "project" {
   type    = string
   default = "play-with-terraform"
@@ -20,7 +16,7 @@ variable "subnet_id" {
 }
 
 variable "security_groups" {
-  type = string
+  type = list(string)
 }
 
 variable "key_name" {
