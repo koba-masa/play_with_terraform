@@ -24,8 +24,8 @@ resource "local_file" "public_key" {
 }
 
 resource "aws_key_pair" "key_pair" {
-  key_name        = "${var.project}_${var.environment_short}"
-  public_key      = tls_private_key.keygen.public_key_openssh
+  key_name   = "${var.project}_${var.environment_short}"
+  public_key = tls_private_key.keygen.public_key_openssh
 
   tags = {
     Project     = var.project
