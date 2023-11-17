@@ -13,7 +13,6 @@ terraform init -reconfigure -backend-config=backend/production.tfbackend
 ```sh
 export TF_VAR_subnet_id={subnet.id}
 export TF_VAR_security_groups={security_group.id,security_group.id}
-export TF_VAR_key_name={key_pair.name}
 ```
 
 ### PLAN
@@ -33,3 +32,5 @@ terraform apply -var-file environments/production.tfvars
 ```sh
 terraform destroy -var-file environments/production.tfvars
 ```
+
+※削除時にtmp配下のファイルも削除されるので、必要あれば退避すること
