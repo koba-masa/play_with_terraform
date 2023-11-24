@@ -10,10 +10,6 @@ variable "environment_short" {
   type = string
 }
 
-variable "region" {
-  type = string
-}
-
 variable "vpc_id" {
   type = string
 }

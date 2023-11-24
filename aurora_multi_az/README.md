@@ -8,6 +8,12 @@
 terraform init -reconfigure -backend-config=backend/production.tfbackend
 ```
 
+### 環境変数の設定
+
+```sh
+export TF_VAR_vpc_id={vpc.id}
+```
+
 ### PLAN
 
 ```sh
