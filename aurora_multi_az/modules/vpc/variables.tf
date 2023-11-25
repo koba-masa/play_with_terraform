@@ -10,6 +10,6 @@ variable "environment_short" {
   type = string
 }
 
-variable "region" {
+variable "cidr_block" {
   type = string
 }
