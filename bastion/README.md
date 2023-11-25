@@ -8,13 +8,6 @@
 terraform init -reconfigure -backend-config=backend/production.tfbackend
 ```
 
-### 環境変数の設定
-
-```sh
-export TF_VAR_subnet_id={subnet.id}
-export TF_VAR_security_groups={security_group.id,security_group.id}
-```
-
 ### PLAN
 
 ```sh
