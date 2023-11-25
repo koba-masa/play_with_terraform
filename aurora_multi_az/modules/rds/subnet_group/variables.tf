@@ -10,7 +10,7 @@ variable "environment_short" {
   type = string
 }
 
-variable "region" {
+variable "vpc_id" {
   type = string
 }
 
@@ -19,5 +19,5 @@ variable "cidr_block" {
 }
 
 variable "availability_zones" {
-  type = string
+  type = list(string)
 }
