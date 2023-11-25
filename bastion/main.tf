@@ -6,7 +6,7 @@ module "bastion_key_pair" {
 }
 
 module "bastion_role" {
-  source            = "./modules/role"
+  source            = "./modules/role/bastion"
   project           = var.project
   environment       = var.environment
   environment_short = var.environment_short
