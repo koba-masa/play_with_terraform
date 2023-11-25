@@ -13,7 +13,7 @@ module "bastion_role" {
 }
 
 module "bastion" {
-  source               = "./modules/ec2"
+  source               = "./modules/instance"
   project              = var.project
   environment          = var.environment
   environment_short    = var.environment_short
