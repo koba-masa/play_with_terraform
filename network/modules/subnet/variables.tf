@@ -1,7 +1,3 @@
-variable "region" {
-  type = string
-}
-
 variable "project" {
   type = string
 }
@@ -14,10 +10,14 @@ variable "environment_short" {
   type = string
 }
 
+variable "vpc_id" {
+  type = string
+}
+
 variable "cidr_block" {
   type = string
 }
 
 variable "availability_zones" {
-  type = string
+  type = list(string)
 }
