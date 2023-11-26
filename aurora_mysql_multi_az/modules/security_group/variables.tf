@@ -10,6 +10,10 @@ variable "environment_short" {
   type = string
 }
 
-variable "region" {
+variable "vpc_id" {
+  type = string
+}
+
+variable "bastion_security_group_id" {
   type = string
 }
