@@ -2,3 +2,4 @@
 .envrc
 src/*.zip
 **/tmp/*
+terraform_import/*
