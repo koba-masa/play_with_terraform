@@ -17,7 +17,7 @@ module "security_group" {
   project           = var.project
   environment       = var.environment
   environment_short = var.environment_short
-  vpc_id            = var.vpc_id
+  vpc_id            = data.terraform_remote_state.remote_state.outputs.production.vpc_id
 }
 
 module "bastion" {
@@ -25,7 +25,7 @@ module "bastion" {
   project              = var.project
   environment          = var.environment
   environment_short    = var.environment_short
-  subnet_id            = var.subnet_id
+  subnet_id            = data.terraform_remote_state.remote_state.outputs.production.public_subnet_ids[0]
   security_groups      = [module.security_group.id]
   key_name             = module.bastion_key_pair.key_name
   iam_instance_profile = module.bastion_role.profile_name
