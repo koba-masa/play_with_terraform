@@ -3,7 +3,7 @@ data "terraform_remote_state" "remote_state" {
 
   config = {
     bucket = "play-with-terraform"
-    key    = "remote_state/production.tfstate"
+    key    = "remote_state/${var.environment}.tfstate"
     region = "us-west-2"
   }
 }
