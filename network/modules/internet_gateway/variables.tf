@@ -1,10 +1,5 @@
-variable "region" {
-  type = string
-}
-
 variable "project" {
-  type    = string
-  default = "play-with-terraform"
+  type = string
 }
 
 variable "environment" {
@@ -12,5 +7,9 @@ variable "environment" {
 }
 
 variable "environment_short" {
+  type = string
+}
+
+variable "vpc_id" {
   type = string
 }

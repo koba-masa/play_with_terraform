@@ -32,14 +32,15 @@ resource "aws_instance" "bastion" {
   }
 }
 
-resource "aws_eip" "bastion_ip_address" {
-  instance = aws_instance.bastion.id
-  domain   = "vpc"
+# 節約のため、EIPは割り当てない
+# resource "aws_eip" "bastion_ip_address" {
+#   instance = aws_instance.bastion.id
+#   domain   = "vpc"
 
-  tags = {
-    Project     = var.project
-    Environment = var.environment
-    Identifier  = "bastion"
-    Name        = "${var.project}-${var.environment_short}-bastion"
-  }
-}
+#   tags = {
+#     Project     = var.project
+#     Environment = var.environment
+#     Identifier  = "bastion"
+#     Name        = "${var.project}-${var.environment_short}-bastion"
+#   }
+# }
