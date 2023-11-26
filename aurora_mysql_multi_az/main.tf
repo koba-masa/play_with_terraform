@@ -16,3 +16,11 @@ module "subnet_group" {
   cidr_block         = data.terraform_remote_state.remote_state.outputs.export.vpc_cidr_block
   availability_zones = data.terraform_remote_state.remote_state.outputs.export.availability_zones
 }
+
+module "monitoring_role" {
+  source            = "./modules/role"
+  project           = var.project
+  environment       = var.environment
+  environment_short = var.environment_short
+}
+
