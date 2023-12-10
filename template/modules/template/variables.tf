@@ -5,7 +5,3 @@ variable "project" {
 variable "environment" {
   type = string
 }
-
-variable "environment_short" {
-  type = string
-}

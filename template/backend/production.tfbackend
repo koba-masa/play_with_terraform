@@ -1,3 +1,0 @@
-bucket = "play-with-terraform"
-key    = "template/production.tfstate"
-region = "us-west-2"
