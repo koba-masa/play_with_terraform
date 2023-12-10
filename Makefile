@@ -1,15 +1,14 @@
-.PHONY: format, lint, fix, ci
+.PHONY: lint, fix, ci
 
 CURRENT_DIR := $(shell pwd)
 
-format:
-	terraform fmt -recursive
-
 lint:
 	terraform validate
+	terraform fmt -check -recursive
 	tflint --recursive --config "$(CURRENT_DIR)/.tflint.hcl"
 
 fix:
+	terraform fmt -recursive
 	tflint --recursive --fix --config "$(CURRENT_DIR)/.tflint.hcl"
 
 ci:
