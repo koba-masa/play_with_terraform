@@ -17,17 +17,17 @@ terraform workspace select prd
 ### PLAN
 
 ```sh
-terraform plan -var-file environments/production.tfvars
+terraform plan -var-file environments/prd.tfvars
 ```
 
 ### APPLY
 
 ```sh
-terraform apply -var-file environments/production.tfvars
+terraform apply -var-file environments/prd.tfvars
 ```
 
 ### DESTROY
 
 ```sh
-terraform destroy -var-file environments/production.tfvars
+terraform destroy -var-file environments/prd.tfvars
 ```
