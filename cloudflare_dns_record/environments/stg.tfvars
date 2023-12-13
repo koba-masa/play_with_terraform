@@ -1,0 +1,1 @@
+project = "play-with-terraform"
