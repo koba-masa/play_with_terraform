@@ -7,11 +7,17 @@ resource "aws_iam_policy" "policy" {
       Version = "2012-10-17"
       Statement = [
         {
-          Action   = ["ec2:Describe*"]
+          Action   = [
+            "s3:ListBucket",
+            "GetObject",
+          ]
           Effect   = "Allow"
-          Resource = "*"
-        }
-      ]
+          Resource = [
+            "${var.s3_bucket_arn}",
+            "${var.s3_bucket_arn}/*",
+          ]
+        },
+      ],
     }
   )
 

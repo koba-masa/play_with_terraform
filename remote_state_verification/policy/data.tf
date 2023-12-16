@@ -6,4 +6,6 @@ data "terraform_remote_state" "remote_state" {
     key    = "remote_state_verification/remote_state.tfstate"
     region = "us-west-2"
   }
+
+  workspace = terraform.workspace
 }
