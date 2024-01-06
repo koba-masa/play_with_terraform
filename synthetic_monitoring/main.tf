@@ -19,7 +19,7 @@ module "policy" {
 }
 
 module "synthetic_monitoring" {
-  source            = "./modules/cloudwatch/synthetic"
+  source            = "./modules/cloudwatch"
   project           = var.project
   environment       = var.environment
   system_identifier = var.system_identifier
