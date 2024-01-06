@@ -3,9 +3,6 @@ resource "aws_iam_role" "synthetic_monitoring" {
   description = "This Role is used by CloudWatch Synthetic."
 
   assume_role_policy = data.aws_iam_policy_document.assume_role_for_lambda.json
-  # managed_policy_arns = [
-  #   "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
-  # ]
 
   tags = {
     Project     = var.project
